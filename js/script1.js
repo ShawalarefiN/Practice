@@ -160,3 +160,5 @@ const bike1 = new bike("H2R")
 
 console.log(carr1.startEngine())
 console.log(bike1.startEngine())
+
+//problem 6: get & set
