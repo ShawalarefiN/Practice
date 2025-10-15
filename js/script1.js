@@ -51,5 +51,64 @@ const car1 = new car("toyota","gt86", 2016)
 
 console.log(car1.getInfo())
 
-//problem 4: Inheritance
+//example 1: Inheritance
+class animal {    
+    speak(){
+        console.log(`animal makes a sound`)
+    }
+}
+class Cat extends animal{
+    speak(){
+        console.log(`cat meows`)
+    }
+}
+const cat = new Cat();
+cat.speak()
+
+//example 2: 
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a sound`);
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const dog = new Dog("Rex");
+dog.speak(); 
+
+//example 3: (super() calls the parent constructor)
+class Vehicle {
+  constructor(brand) {
+    this.brand = brand;
+  }
+}
+
+class Car extends Vehicle {
+  constructor(brand, model) {
+    super(brand); // calls Vehicle constructor
+    this.model = model;
+  }
+
+  getInfo() {
+    console.log(`${this.brand} ${this.model}`);
+  }
+}
+
+const car = new Car("Toyota", "Corolla");
+car.getInfo(); 
+
+//Problem 4: inheriance 
+class shape{
+    constructor(a,b){
+        
+    }
+}
 
