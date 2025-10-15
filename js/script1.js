@@ -102,13 +102,37 @@ class Car extends Vehicle {
   }
 }
 
-const car = new Car("Toyota", "Corolla");
-car.getInfo(); 
+const car2 = new Car("Toyota", "Corolla");
+car2.getInfo(); 
 
 //Problem 4: inheriance 
-class shape{
-    constructor(a,b){
-        
-    }
+class shape{    
+    getArea(){}
 }
+
+class circle extends shape{
+  constructor (r){
+    super();
+    this.r = r;
+  }
+  getArea(){    
+    return Math.PI * (this.r ** 2);
+  }
+}
+
+class square extends shape{   
+    constructor (a,b){
+    super()
+    this.a = a;
+    this.b = b;
+  }
+  getArea(){   
+    return this.a ** 2;
+  }
+}
+const sq = new square(5,5);
+const cir = new circle(1);
+
+console.log("\nSquare Area: " + sq.getArea())
+console.log("Circle area: " + cir.getArea())
 
