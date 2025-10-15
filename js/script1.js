@@ -134,5 +134,29 @@ const sq = new square(5,5);
 const cir = new circle(1);
 
 console.log("\nSquare Area: " + sq.getArea())
-console.log("Circle area: " + cir.getArea())
+console.log("Circle area: " + Math.floor(cir.getArea()) + "\n")
 
+//Problem 5: 
+class gari{
+  constructor(name){
+    this.name = name;
+  }
+  startEngine(){} 
+}
+
+class carr extends gari{  
+  startEngine(){
+    return `${this.name} has started its engine`
+  }
+}
+
+class bike extends gari{
+  startEngine(){
+    return `${this.name} has started its engine`
+  }
+}
+const carr1 = new carr("Nissan")
+const bike1 = new bike("H2R")
+
+console.log(carr1.startEngine())
+console.log(bike1.startEngine())
