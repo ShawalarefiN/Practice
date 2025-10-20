@@ -152,7 +152,7 @@ class carr extends gari{
 
 class bike extends gari{
   startEngine(){
-    return `${this.name} has started its engine`
+    return `${this.name} has started its engine\n`
   }
 }
 const carr1 = new carr("Nissan")
@@ -161,4 +161,28 @@ const bike1 = new bike("H2R")
 console.log(carr1.startEngine())
 console.log(bike1.startEngine())
 
-//problem 6: get & set
+//example 4: getters & setters
+class Counter {
+  constructor() {
+    this._count = 0;
+  }
+
+  get count() {
+    return this._count;
+  }
+
+  set count(value) {
+    if (value < 0) console.log("Count can't be negative");
+    else this._count = value;
+  }
+
+  static description() {
+    return "A simple counter class";
+  }
+}
+
+const c = new Counter();
+c.count = 5;
+console.log(c.count);
+console.log(Counter.description());
+
